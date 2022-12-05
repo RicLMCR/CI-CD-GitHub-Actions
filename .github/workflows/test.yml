@@ -1,0 +1,21 @@
+name: run test file
+
+on:
+  push:
+    branches: [ "development" ]
+  pull_request:
+    branches: [ "development" ]
+    
+jobs: 
+  run-tests:
+    name: Run app.js test
+    runs-on: ubuntu-latest
+    container: 
+      image: composer:latest
+      volumes:
+        - my-app:/app
+    steps:
+      - name: Running composer install
+        run: composer install
+      - name: Running app.js test
+        run: ./src/App.test.js
