@@ -11,6 +11,7 @@ RUN npm install
 
 # first '.' means target everything in the local dir
 #  second '.' means copy to same location noted above - /app
+# ddfdddd
 COPY . .
 
 EXPOSE 3000
