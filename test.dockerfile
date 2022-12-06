@@ -4,7 +4,7 @@ FROM node:17-alpine
 WORKDIR /app
 
 # by adding jso file and npm i before the main copy declaration (line 13) we can cache
-# and reduce build times for future iterations
+# and reduce build times for future iterations :-) :-) 
 COPY package.json .
 
 RUN npm install
